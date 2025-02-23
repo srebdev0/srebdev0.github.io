@@ -2,7 +2,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5fff9;
+    background-color: #005b25;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
 
 .logo {
     font-size: 26px;
-    color: #ffffff;
+    color: #106b00;
     text-decoration: none;
     font-weight: bold;
 }
