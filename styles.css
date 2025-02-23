@@ -2,7 +2,7 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #abffa2;
+    background-color: #fafffa;
     color: #333;
 }
 
@@ -64,7 +64,7 @@ nav ul li a:hover,
 }
 
 .btn {
-    background-color: #8BC34A;
+    background-color: #e2ffc1;
     color: #ffffff;
     text-decoration: none;
     padding: 10px 25px;
@@ -74,7 +74,7 @@ nav ul li a:hover,
 }
 
 .btn:hover {
-    background-color: #689F38;
+    background-color: #e2ffc9;
 }
 
 .cards, .team-cards {
