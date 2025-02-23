@@ -2,108 +2,119 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8;
+    background-color: #f5fff9;
 }
 
 header {
-    background-color: #233D4D;
-    padding: 20px 40px;
+    background-color: #2E7D32;
+    padding: 15px 40px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 1000;
 }
 
 .logo {
-    color: white;
-    font-weight: 600;
-    font-size: 24px;
+    font-size: 26px;
+    color: #ffffff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .logo span {
-    color: #FFC107;
+    color: #B2FF59;
 }
 
 nav ul {
     float: right;
-    list-style: none;
     margin: 0;
 }
 
 nav ul li {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    transition: 0.3s;
+    font-weight: 600;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: #FFC107;
+nav ul li a:hover, .active {
+    color: #B2FF59;
 }
 
 .hero-small {
-    background: url('https://source.unsplash.com/1600x600/?environment') no-repeat center center/cover;
-    height: 300px;
-    margin-top: 80px;
-    color: white;
+    background-image: url('https://source.unsplash.com/1600x600/?green,sustainability');
+    background-size: cover;
+    background-position: center;
+    height: 280px;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-top: 70px;
 }
 
-.cards, .team {
-    padding: 40px;
+.cards, .team-cards {
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
 }
 
 .card, .team-card {
-    background-color: white;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
+    width: 280px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    width: 300px;
-    text-align: center;
+    transition: all 0.3s ease;
+    border-bottom: 5px solid #2E7D32;
 }
 
 .card:hover, .team-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.story {
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #e8f5e9;
+    border-radius: 10px;
 }
 
 footer {
-    background-color: #233D4D;
-    color: white;
-    padding: 20px;
+    background-color: #2E7D32;
+    color: #ffffff;
     text-align: center;
+    padding: 20px;
 }
 
 .social-links a {
-    color: white;
-    margin: 0 10px;
+    color: #B2FF59;
+    margin: 0 8px;
     text-decoration: none;
-    transition: 0.3s;
 }
 
 .social-links a:hover {
-    color: #FFC107;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
     nav ul {
         display: none;
     }
-    .cards, .team {
+
+    .cards, .team-cards {
         flex-direction: column;
         align-items: center;
     }
