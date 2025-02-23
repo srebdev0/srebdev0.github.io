@@ -1,12 +1,12 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #008636;
+    background-color: #f5fff9;
 }
 
 header {
-    background-color: #56d65c;
+    background-color: #2E7D32;
     padding: 15px 40px;
     position: fixed;
     width: 100%;
@@ -17,7 +17,7 @@ header {
 
 .logo {
     font-size: 26px;
-    color: #106b00;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
@@ -46,11 +46,11 @@ nav ul li a:hover, .active {
     color: #B2FF59;
 }
 
-.hero-small {
+.hero, .hero-small {
     background-image: url('https://source.unsplash.com/1600x600/?green,sustainability');
     background-size: cover;
     background-position: center;
-    height: 280px;
+    height: 350px;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -58,6 +58,24 @@ nav ul li a:hover, .active {
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     margin-top: 70px;
+}
+
+.hero-small {
+    height: 250px;
+}
+
+.btn {
+    background-color: #B2FF59;
+    color: #2E7D32;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffffff;
 }
 
 .cards, .team-cards {
@@ -74,22 +92,30 @@ nav ul li a:hover, .active {
     padding: 20px;
     width: 280px;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     border-bottom: 5px solid #2E7D32;
 }
 
 .card:hover, .team-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-.story {
+.benefits {
     padding: 30px;
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
     background-color: #e8f5e9;
     border-radius: 10px;
+}
+
+.benefits ul {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+}
+
+.benefits li {
+    margin: 10px 0;
 }
 
 footer {
@@ -117,5 +143,10 @@ footer {
     .cards, .team-cards {
         flex-direction: column;
         align-items: center;
+    }
+
+    .hero, .hero-small {
+        padding: 20px;
+        text-align: center;
     }
 }
