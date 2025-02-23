@@ -2,11 +2,12 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5fff9;
+    background-color: #FAFAFA;
+    color: #333;
 }
 
 header {
-    background-color: #2E7D32;
+    background-color: #2F4F4F;
     padding: 15px 40px;
     position: fixed;
     width: 100%;
@@ -16,14 +17,14 @@ header {
 }
 
 .logo {
-    font-size: 26px;
-    color: #ffffff;
+    font-size: 24px;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
 .logo span {
-    color: #B2FF59;
+    color: #8BC34A;
 }
 
 nav ul {
@@ -37,45 +38,43 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover, .active {
-    color: #B2FF59;
+nav ul li a:hover,
+.active {
+    color: #8BC34A;
 }
 
 .hero, .hero-small {
-    background-image: url('https://source.unsplash.com/1600x600/?green,sustainability');
+    background-image: url('https://source.unsplash.com/1600x600/?nature,eco-friendly');
     background-size: cover;
     background-position: center;
-    height: 350px;
-    color: #ffffff;
+    height: 320px;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
     margin-top: 70px;
 }
 
-.hero-small {
-    height: 250px;
-}
-
 .btn {
-    background-color: #B2FF59;
-    color: #2E7D32;
+    background-color: #8BC34A;
+    color: #ffffff;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 25px;
+    border-radius: 30px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #ffffff;
+    background-color: #689F38;
 }
 
 .cards, .team-cards {
@@ -88,51 +87,44 @@ nav ul li a:hover, .active {
 
 .card, .team-card {
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
     width: 280px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    border-bottom: 5px solid #2E7D32;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-top: 4px solid #8BC34A;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 .card:hover, .team-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .benefits {
     padding: 30px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #e8f5e9;
-    border-radius: 10px;
-}
-
-.benefits ul {
+    max-width: 750px;
+    margin: 20px auto;
+    background-color: #F0F8F3;
+    border-radius: 8px;
     text-align: left;
-    list-style-type: none;
-    padding: 0;
-}
-
-.benefits li {
-    margin: 10px 0;
 }
 
 footer {
-    background-color: #2E7D32;
+    background-color: #2F4F4F;
     color: #ffffff;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 .social-links a {
-    color: #B2FF59;
+    color: #8BC34A;
     margin: 0 8px;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    text-decoration: underline;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -140,13 +132,17 @@ footer {
         display: none;
     }
 
+    header, .hero, .hero-small {
+        padding: 10px;
+        text-align: center;
+    }
+
     .cards, .team-cards {
         flex-direction: column;
         align-items: center;
     }
 
-    .hero, .hero-small {
-        padding: 20px;
-        text-align: center;
+    .card, .team-card {
+        width: 90%;
     }
 }
