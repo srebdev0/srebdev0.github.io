@@ -1,4 +1,4 @@
-/* === BASE RESET === */
+/* === GLOBAL RESET === */
 * {
     margin: 0;
     padding: 0;
@@ -12,24 +12,23 @@
     line-height: 1.7;
   }
   
-  /* === HEADER === */
-  header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 60px;
+  /* === NAVIGATION === */
+  header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
-    background-color: transparent;
-    color: white;
+    padding: 20px 60px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
   
   .logo {
     font-size: 28px;
     font-weight: bold;
-    color: #ffffff;
+    color: #008f44;
     text-decoration: none;
   }
   
@@ -44,108 +43,160 @@
   }
   
   nav ul li a {
-    color: #ffffff;
+    color: #333;
     text-decoration: none;
     font-weight: 600;
+    padding: 6px 0;
   }
   
+  nav ul li a.active,
   nav ul li a:hover {
     border-bottom: 2px solid #00ba58;
   }
   
-  /* === HERO SECTION === */
-  .hero {
-    height: 100vh;
-    background: url('images/your-hero-image.jpg') center/cover no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .overlay {
-    background: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    inset: 0;
-  }
-  
-  .hero-text {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: white;
-  }
-  
-  .hero-text h1 {
-    font-size: 3.8rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  .hero-text p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .cta-button {
+  /* === HERO SMALL === */
+  .hero-small {
     background-color: #00ba58;
     color: white;
-    padding: 14px 28px;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 100px 20px;
+    text-align: center;
   }
   
-  .cta-button:hover {
-    background-color: #009749;
+  .hero-small h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
   }
   
-  /* === STATS SECTION === */
-  .stats {
+  .hero-small p {
+    font-size: 1.3rem;
+  }
+  
+  /* === CARDS SECTION === */
+  .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 60px;
+    gap: 40px;
+    padding: 60px 20px;
     background: #ffffff;
-    padding: 80px 20px;
+  }
+  
+  .card {
+    max-width: 300px;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h3 {
+    color: #00ba58;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  /* === STORY SECTION === */
+  .story {
+    background: #f0f0f0;
+    padding: 60px 20px;
     text-align: center;
   }
   
-  .stat h2 {
-    font-size: 3rem;
+  .story h2 {
+    font-size: 2rem;
+    color: #00ba58;
+    margin-bottom: 20px;
+  }
+  
+  .story p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.05rem;
+    color: #333;
+  }
+  
+  /* === TEAM SECTION === */
+  .team {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .team h2 {
+    font-size: 2rem;
+    color: #00ba58;
+    margin-bottom: 40px;
+  }
+  
+  .team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .team-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .team-card h4 {
+    font-size: 1.2rem;
+    color: #008f44;
+    margin-bottom: 10px;
+  }
+  
+  .team-card p {
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  /* === FOOTER === */
+  footer {
+    background: #263238;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  footer .social-links a {
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  footer .social-links a:hover {
     color: #00ba58;
   }
   
-  .stat p {
-    margin-top: 12px;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-  
-  /* === WHATSAPP BUTTON === */
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    font-size: 22px;
-    padding: 14px;
-    border-radius: 50%;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    text-decoration: none;
-  }
-  
-  .whatsapp-float:hover {
-    background-color: #1ebe5b;
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .hero-small h1 {
+      font-size: 2.4rem;
+    }
+    .cards, .team-cards {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
+  
   
