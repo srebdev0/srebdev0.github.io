@@ -1,92 +1,75 @@
-/* === GLOBAL RESET === */
-* {
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfaf5;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    line-height: 1.65;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+    transition: all 0.2s ease-in-out;
   }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fefefc;
-    color: #1f1f1f;
-    line-height: 1.7;
-  }
-  
-  /* === NAVIGATION === */
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #008f44;
-    text-decoration: none;
-  }
-  
-  .logo span {
-    color: #00ba58;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-  }
-  
-  nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 6px 0;
-  }
-  
-  nav ul li a.active,
-  nav ul li a:hover {
-    border-bottom: 2px solid #00ba58;
-  }
-  
-  /* === HERO SMALL === */
-  .hero-small {
-    background-color: #00ba58;
+
+
+  button, .btn, input[type="submit"] {
+    background-color: #c6a84f;
     color: white;
-    padding: 100px 20px;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover, .btn:hover {
+    background-color: #a5853e;
+  }
+  
+  a {
+    color: #c6a84f;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #a5853e;
+    text-decoration: underline;
+    opacity: 0.85;
+  }
+
+
+
+
+  footer {
+    background-color: #fff8e1;
+    color: #6e5b2b;
     text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0d6c0;
+  }
+
+
+
+  h1, h2, h3, h4 {
+    color: #bfa76f;
   }
   
-  .hero-small h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+  .card h3,
+  .team-card h4,
+  .story h2,
+  .team h2 {
+    color: #bfa76f;
   }
-  
-  .hero-small p {
-    font-size: 1.3rem;
-  }
-  
-  /* === CARDS SECTION === */
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    padding: 60px 20px;
-    background: #ffffff;
-  }
-  
+
+
   .card {
-    max-width: 300px;
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    margin: 2rem 0;
+    border: 1px solid #eee;
     text-align: center;
     transition: transform 0.3s ease;
   }
@@ -94,107 +77,14 @@
   .card:hover {
     transform: translateY(-5px);
   }
-  
-  .card h3 {
-    color: #00ba58;
-    margin-bottom: 10px;
+
+
+  :root {
+    --gold: #c6a84f;
+    --gold-dark: #a5853e;
+    --gold-soft: #bfa76f;
+    --gold-bg: #fff8e1;
   }
-  
-  .card p {
-    font-size: 0.95rem;
-    color: #333;
-  }
-  
-  /* === STORY SECTION === */
-  .story {
-    background: #f0f0f0;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .story h2 {
-    font-size: 2rem;
-    color: #00ba58;
-    margin-bottom: 20px;
-  }
-  
-  .story p {
-    max-width: 800px;
-    margin: auto;
-    font-size: 1.05rem;
-    color: #333;
-  }
-  
-  /* === TEAM SECTION === */
-  .team {
-    background: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
-  }
-  
-  .team h2 {
-    font-size: 2rem;
-    color: #00ba58;
-    margin-bottom: 40px;
-  }
-  
-  .team-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  
-  .team-card {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  
-  .team-card h4 {
-    font-size: 1.2rem;
-    color: #008f44;
-    margin-bottom: 10px;
-  }
-  
-  .team-card p {
-    font-size: 0.95rem;
-    color: #333;
-  }
-  
-  /* === FOOTER === */
-  footer {
-    background: #263238;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-  }
-  
-  footer .social-links a {
-    color: white;
-    margin: 0 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
-  
-  footer .social-links a:hover {
-    color: #00ba58;
-  }
-  
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      gap: 15px;
-    }
-    .hero-small h1 {
-      font-size: 2.4rem;
-    }
-    .cards, .team-cards {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+
+
   

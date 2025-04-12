@@ -80,4 +80,49 @@
 <script src="script.js"></script>
 
 </body>
+
+
+<section class="impact-stats">
+    <h2>Our Impact</h2>
+    <div class="stats-wrapper">
+      <div class="stat-box">
+        <h3><span id="paversCount">0</span>+</h3>
+        <p>Pavers Made</p>
+      </div>
+      <div class="stat-box">
+        <h3><span id="plasticCount">0</span> Tons</h3>
+        <p>Plastic Recycled</p>
+      </div>
+      <div class="stat-box">
+        <h3><span id="jobsCount">0</span>+</h3>
+        <p>Jobs Created</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script>
+    function animateCount(id, target, duration) {
+      const el = document.getElementById(id);
+      let start = 0;
+      const step = Math.ceil(target / (duration / 16));
+      const interval = setInterval(() => {
+        start += step;
+        if (start >= target) {
+          start = target;
+          clearInterval(interval);
+        }
+        el.textContent = start;
+      }, 16);
+    }
+    
+    window.onload = function () {
+      animateCount('paversCount', 5000, 2000);
+      animateCount('plasticCount', 18, 2000);
+      animateCount('jobsCount', 47, 2000);
+    };
+    </script>
+
+    
 </html>
